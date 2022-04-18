@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../../SharedPage/Loading/Loading';
+import SocialLogin from '../../SharedPage/SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('')
@@ -69,7 +70,7 @@ const Login = () => {
             <p className='text-center'>New to event-planner / <span onClick={handleNavigate} style={{cursor:'pointer'}} className='text-danger'>create an account</span></p>
             <p className='text-center'>Forget Password / <button className='btn btn-link' onClick={resetPassword} style={{cursor:'pointer'}} >Reset Password</button></p>
             <ToastContainer />
-
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

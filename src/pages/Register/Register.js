@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import './Register.css';
 import Loading from '../../SharedPage/Loading/Loading';
 import auth from '../../firebase.init';
+import SocialLogin from '../../SharedPage/SocialLogin/SocialLogin';
 
 const Register = () => {
     let errorElement;
@@ -66,6 +67,7 @@ const Register = () => {
             </form>
             {errorElement}
             <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
