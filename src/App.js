@@ -9,6 +9,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import RequiredAuth from './SharedPage/RequiredAuth/RequiredAuth';
 import About from './pages/About/About';
+import NotFound from './SharedPage/NotFound/NotFound';
 // import RequiredAuth from './SharedPage/RequiredAuth/RequiredAuth';
 
 
@@ -30,6 +31,7 @@ function App() {
           </RequiredAuth>
 
         }></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
