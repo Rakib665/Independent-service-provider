@@ -4,6 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../../SharedPage/Loading/Loading';
 
 const Login = () => {
     const emailRef = useRef('')
@@ -26,20 +27,19 @@ const Login = () => {
           </div>
          
       }
-      if (loading ) {
-        return <p className='text-center'>Loading...</p>;
+      if (loading || sending ) {
+        return <Loading></Loading>
       }
       if (user ) {
-       navigate('/home')
-      }
+        navigate(from, { replace: true });
+    }
     const handleSubmit = (event) => {
         event.preventDefault()
         const email = emailRef.current.value
         const password = passwordRef.current.value
         signInWithEmailAndPassword(email,password)
-        if(user){
-            navigate(from, { replace: true });
-        }
+       
+        
     }
     const handleNavigate = (event) =>{
             navigate('/register')

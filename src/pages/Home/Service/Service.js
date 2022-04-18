@@ -1,19 +1,21 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import './Service.css'
 
-const Service = ({service}) => {
-    const navigate = useNavigate()
-    const {name,img,price} = service
-    const handleCheckOut = () =>{
-        navigate('/checkout')
-    }
+const Service = ({ service }) => {
+    const { name, img, price } = service
+   
+    //
     return (
         <div className='service text-center'>
-           <img src={img} alt="" />
-           <h2>{name}</h2>
-           <p>Price: ${price}</p>
-           <button onClick={handleCheckOut}>Go & Checkout</button>
+            <img src={img} alt="" />
+            <h2>{name}</h2>
+            <p>Price: ${price}</p>
+            <Link to='/checkout'>
+            <button >Go and Checkout</button>
+
+            </Link>
+            
         </div>
     );
 };
