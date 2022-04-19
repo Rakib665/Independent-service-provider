@@ -10,8 +10,7 @@ import Register from './pages/Register/Register';
 import RequiredAuth from './SharedPage/RequiredAuth/RequiredAuth';
 import About from './pages/About/About';
 import NotFound from './SharedPage/NotFound/NotFound';
-// import RequiredAuth from './SharedPage/RequiredAuth/RequiredAuth';
-
+import Blogs  from './pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -31,6 +30,7 @@ function App() {
           </RequiredAuth>
 
         }></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

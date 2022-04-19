@@ -1,6 +1,8 @@
 .services-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    background-color: #E8F6F3;
+    padding: 20px;
 }
 @media only screen and (max-width:576px) {
     .services-container{
@@ -8,8 +10,8 @@
     }
 }
 
-@media only screen and (min-width: 577px) and (max-width: 992px) {
+/* @media only screen and (min-width: 577px) and (max-width: 992px) {
     .services-container{
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} */

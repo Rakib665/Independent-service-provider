@@ -1,0 +1,17 @@
+.loveDiv{
+    background-color: #D6EAF8;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+@media screen and (max-width:576px) {
+    div{
+        width: 100%;
+    }
+    
+}
+.loveDiv h2{
+    color: #616A6B;
+}
+.loveDiv p{
+    color: #85929E;
+}
