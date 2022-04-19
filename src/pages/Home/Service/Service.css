@@ -1,3 +1,15 @@
-.service img{
-margin-bottom: 5px;
+/* .service img {
+    margin-bottom: 5px;
+
+} */
+
+.service {
+    /* border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px; */
+    margin-bottom: 5px;
+}
+.checkout-btn{
+    border-radius: 5px;
 }
